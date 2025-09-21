@@ -10,10 +10,10 @@ import java.util.List;
 
 public class MemoService {
 
-    private final JdbcTemplate jdbcTemplate;
+    private final MemoRepository memoRepository;
 
     public MemoService(JdbcTemplate jdbcTemplate) {
-        this.jdbcTemplate = jdbcTemplate;
+        this.memoRepository = new MemoRepository(jdbcTemplate);
     }
 
     public MemoResponseDto createMemo(MemoRequestDto requestDto) {

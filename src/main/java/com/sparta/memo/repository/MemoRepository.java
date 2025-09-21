@@ -20,6 +20,6 @@ import java.util.List;
 
 @Component
 public interface MemoRepository extends JpaRepository<Memo, Long> {
-
+    List<Memo> findAllByOrderByModifiedAtDesc();
 
 }
